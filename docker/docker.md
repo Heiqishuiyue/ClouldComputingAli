@@ -29,6 +29,11 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker
 ```
 
+5. 设置开机自启
+```bash
+systemctl enable docker.service
+```
+
 ## 常用docker命令
 ```bash
 systemctl start docker 
@@ -46,6 +51,13 @@ sudo docker logs -f mysql
 
 # check status of docker
 sudo systemctl status docker
+
+docker start tomcat
+
+docker start nginx
+
+# update container for always restart 
+docker update --restart=always tomcat
 ```
 
 # docker配置mysql
